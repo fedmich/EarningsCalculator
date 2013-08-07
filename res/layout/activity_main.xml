@@ -18,47 +18,94 @@
         android:layout_toRightOf="@+id/txtMonth" />
 
     <TextView
-        android:id="@+id/txtWeek"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView2"
-        android:layout_alignLeft="@+id/txtMonth"
-        android:text="week" />
-
-    <TextView
-        android:id="@+id/txtMonth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editNumber"
-        android:layout_below="@+id/buttonCalculate"
-        android:layout_marginTop="21dp"
-        android:text="month" />
-    
-    <EditText
-        android:id="@+id/editNumber"
+        android:id="@+id/TextView01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="27dp"
+        android:text="Day earning:" />
+
+    <EditText
+        android:id="@+id/editNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/TextView01"
+        android:layout_toRightOf="@+id/TextView01"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
 
     <Button
         android:id="@+id/buttonCalculate"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtWeek"
+        android:layout_alignLeft="@+id/TextView01"
+        android:layout_alignRight="@+id/editNumber"
         android:layout_below="@+id/editNumber"
-        android:text="Calculate" android:onClick="calculate" />
+        android:onClick="calculate"
+        android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonCalculate"
+        android:layout_centerHorizontal="true"
+        android:text="Results" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonCalculate"
+        android:layout_below="@+id/TextView02"
+        android:text="Week:" />
+
+    <TextView
+        android:id="@+id/TextView05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtYear"
+        android:layout_alignBottom="@+id/txtYear"
+        android:layout_alignRight="@+id/TextView03"
+        android:text="Year:" />
+
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/TextView05"
+        android:text="Month:" />
+
+    <TextView
+        android:id="@+id/txtWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView03"
+        android:layout_alignBottom="@+id/TextView03"
+        android:layout_toLeftOf="@+id/TextView02"
+        android:layout_toRightOf="@+id/TextView04"
+        android:text="week" />
+
+    <TextView
+        android:id="@+id/txtMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/txtWeek"
+        android:layout_below="@+id/txtWeek"
+        android:layout_toRightOf="@+id/TextView04"
+        android:text="month" />
 
     <TextView
         android:id="@+id/txtYear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtMonth"
         android:layout_below="@+id/txtMonth"
-        android:text="Year" />
+        android:layout_toLeftOf="@+id/textView2"
+        android:layout_toRightOf="@+id/TextView04"
+        android:text="year" />
 
 </RelativeLayout>
