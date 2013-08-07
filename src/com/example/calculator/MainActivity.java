@@ -1,5 +1,8 @@
 package com.example.calculator;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
@@ -50,9 +53,9 @@ public class MainActivity extends Activity {
     		num = Integer.parseInt((String) numBox.getText().toString() );
     	}
 
-    	tWeek.setText("$" + ((int) (num * 7)));
-    	tMonth.setText("$" + ((int) (num * 30)));
-    	tYear.setText("$" + ((int) (num * 365)));
+	tWeek.setText("$" + (NumberFormat.getIntegerInstance( Locale.US ).format (num * 7)));
+	tMonth.setText("$" + (NumberFormat.getIntegerInstance( Locale.US ).format (num * 30)));
+	tYear.setText("$" + (NumberFormat.getIntegerInstance( Locale.US ).format (num * 365)));
     	
     }
     
