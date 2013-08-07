@@ -88,6 +88,7 @@
         android:layout_alignBottom="@+id/TextView03"
         android:layout_toLeftOf="@+id/TextView02"
         android:layout_toRightOf="@+id/TextView04"
+		android:singleLine="true"
         android:text="week" />
 
     <TextView
@@ -97,6 +98,7 @@
         android:layout_alignRight="@+id/txtWeek"
         android:layout_below="@+id/txtWeek"
         android:layout_toRightOf="@+id/TextView04"
+		android:singleLine="true"
         android:text="month" />
 
     <TextView
@@ -106,6 +108,7 @@
         android:layout_below="@+id/txtMonth"
         android:layout_toLeftOf="@+id/textView2"
         android:layout_toRightOf="@+id/TextView04"
+		android:singleLine="true"
         android:text="year" />
 
 </RelativeLayout>
